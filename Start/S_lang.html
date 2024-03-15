@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+        .menu {
+            top: 0;
+            left: 0;
+            width: 100%;
+            position: fixed;
+            font-family: Arial, sans-serif;
+            background-color: #2C8748;
+          }
+          .menu img {
+            margin-left: 40px;
+            width: 120px; 
+            height: auto; 
+            transform: scale(2);
+          }
+          h1 {
+            top: 28%;
+            left: 26%;
+            font-family: Arial, sans-serif;
+            position: fixed;
+            text-align: center;
+            font-size: 50px;
+            color: #2C8748;
+          }
+          .eng {
+            position: fixed;
+            top: 50%; 
+            left: 35%;
+            transform: translateX(-50%);
+            background-color: #2C8748;
+            color: white;
+            padding: 30px 110px;
+            font-size: 35px;
+            border: none;
+            border-radius: 45px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          .eng:hover {
+            background-color: #1F5D32; 
+          }
+          .tag {
+            position: fixed;
+            top: 50%; 
+            left: 65%;
+            transform: translateX(-50%);
+            background-color: #2C8748;
+            color: white;
+            padding: 30px 110px;
+            font-size: 35px;
+            border: none;
+            border-radius: 45px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          .tag:hover {
+            background-color: #1F5D32; /* Darker shade on hover */
+          }
+    </style>
+</head>
+<body>
+    <h1>Please select your language</h1>
+    <div class="menu">
+        <img src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Sources\heading.png" alt="Logo">
+      </div>
+
+      <button  class="eng" onclick="redirectToPage('S_lang.html')">English</button>
+      <button class="tag" onclick="redirectToPage('leaderboard.html')">Filipino</button>
+
+      <script>
+        function redirectToPage(url) {
+          window.location.href = url;
+        }
+        </script>
+</body>
+</html>
