@@ -18,7 +18,14 @@
             height: auto; 
             transform: scale(2);
           }
+          @keyframes panDown {
+            0% { transform: translateY(0); } /* Start position */
+            100% { transform: translateY(50px); } /* End position - adjust as needed */
+          }
           .rounded-square {
+            position: fixed;
+            top: 7%;
+            left: 4.5%;
             width: 1250px; /* Adjust the width of the square */
             height: 500px; /* Adjust the height of the square */
             background-color: #2C8748; /* Color of the square */
@@ -26,6 +33,7 @@
             transform: translate(4.2%, 20%); /* Adjust the translation */
             color: white;
             font-family: Arial, Helvetica, sans-serif;
+            animation: panDown 2s ease-in-out forwards;
           }
           .rounded-square h1 {
             position: fixed;
