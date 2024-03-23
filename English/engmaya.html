@@ -54,9 +54,11 @@
       font-size: 25px;
     }
     .cahs {
+      width: 500px; /* Adjust the width to your preference */
+      height: auto;
       position: absolute; /* Set position to absolute to position it relative to its parent */
-      top: 15%; /* Move the top of the image to the vertical center of the parent */
-      left: 34%; /* Move the left of the image to the horizontal center of the parent */
+      top: 16%; /* Move the top of the image to the vertical center of the parent */
+      left: 36%; /* Move the left of the image to the horizontal center of the parent */
       transform: translate(-10%, -10%); /* Move the image back by half of its own width and height */
   }
   .next {
@@ -90,14 +92,14 @@
     <form action="/action_page.php">
       <input type="text1" id="num" class="num-input" pattern="\d*" maxlength="11" oninput="validity.valid||(value='');">
     </form>
-    <button  class="next" onclick="redirectToPage('enggcashsum.html')">Next</button>
+    <button  class="next" onclick="redirectToPage('engmayasum.html')">Next</button>
   </div>
   
   
 
 <script>
-  function redirectToPage() {
-    window.location.href = "start2.html";
+  function redirectToPage(url) {
+    window.location.href = url;
   }
   </script>
 
