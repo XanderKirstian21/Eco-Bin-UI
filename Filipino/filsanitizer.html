@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+        .menu {
+            top: 0;
+            left: 0;
+            width: 100%;
+            position: fixed;
+            font-family: Arial, sans-serif;
+            background-color: #2C8748;
+          }
+          .menu img {
+            margin-left: 40px;
+            width: 120px; 
+            height: auto; 
+            transform: scale(2);
+          }
+          .logo {
+            width: 800px; /* Adjust the width to your preference */
+            height: auto; 
+            position: fixed; /* Set position to absolute to position it relative to its parent */
+            top: 2%;
+            left: 20%; /* Move the left of the image to the horizontal center of the parent */
+          
+        }
+        .txt1 {
+            position: fixed;
+            top: 70%;
+            left: 18%;
+            font-size: 45px;
+            color:#2C8748;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .yes {
+            position: fixed;
+            top: 85%; 
+            left: 22%;
+            transform: translateX(-50%) scale(1.2);
+            background-color: #2C8748;
+            color: white;
+            padding: 18px 100px;
+            font-size: 30px;
+            border: none;
+            border-radius: 45px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          .yes:hover {
+            background-color: #1F5D32;
+            color: white;
+          }
+          .no {
+            position: fixed;
+            top: 85%; 
+            left: 78%;
+            transform: translateX(-50%) scale(1.2);
+            background-color: red;
+            color: white;
+            padding: 18px 100px;
+            font-size: 30px;
+            border: none;
+            border-radius: 45px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          .no:hover {
+            background-color: black;
+            color: white;
+          }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <img src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Sources\heading.png" alt="Logo">
+      </div>
+      <img class="logo" src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Sources\sanitizer.png" alt="Logo">
+      <h1 class="txt1">Nais mo bang gumamit ng Hand Sanitizer?</h1>
+      <button class="yes" onclick="redirectToPage('filend.html')">Oo</button>
+      <button class="no" onclick="redirectToPage('filend.html')">Hindi</button>
+    </body>
+
+    <script>
+        function redirectToPage(url) {
+          window.location.href = url;
+        }
+        </script>
+</html>
