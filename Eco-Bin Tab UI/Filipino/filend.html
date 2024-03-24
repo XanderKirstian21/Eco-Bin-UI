@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+        .menu {
+            top: 0;
+            left: 0;
+            width: 100%;
+            position: fixed;
+            font-family: Arial, sans-serif;
+            background-color: #2C8748;
+          }
+          .menu img {
+            margin-left: 40px;
+            width: 120px; 
+            height: auto; 
+            transform: scale(2);
+          }
+          video {
+            position: fixed;
+            top: 3%;
+            left: 15%;
+            width: 70%;
+            height: auto;
+            transform: scale(0.8);
+          }
+          .txt1 {
+            position: fixed;
+            top: 68%;
+            left: 25%;
+            font-size: 45px;
+            color:#2C8748;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .txt2 {
+            position: fixed;
+            top:77%;
+            left: 12%;
+            font-size: 45px;
+            color:#2C8748;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+        }
+        .txt3 {
+            position: fixed;
+            top:87%;
+            left: 30%;
+            font-size: 45px;
+            color:#2C8748;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <img src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Assets\heading.png" alt="Logo">
+      </div>
+      <div class="video-container">
+        <video autoplay loop muted>
+          <source src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Assets\logoA.mp4" type="video/mp4">
+        </video>
+        <h1 class="txt1">Salamat sa paggamit ng Eco-Bin. </h1>
+        <h1 class="txt2">Sabay-sabay tayong magkaroon ng positibong</h1>
+        <h1 class="txt3">epekto sa ating planeta!</h1>
+        <script>
+            function redirectToStart() {
+                setTimeout(function() {
+                    window.location.href = "file:C:/Users/Xander Kirstian/Downloads/Eco-Bin UI/Eco-Bin Tab UI/Start/start.html"; 
+                }, 5000); // 5 seconds in milliseconds
+            }
+    
+            // Call the function when the page loads
+            redirectToStart();
+        </script>
+
+</body>
+</html>

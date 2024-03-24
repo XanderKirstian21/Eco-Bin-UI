@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Touch to Start</title>
+  <style>
+    body{
+      background-color: black;
+    }
+    .menu {
+      top: 0;
+      left: 0;
+      width: 100%;
+      position: fixed;
+      font-family: Arial, sans-serif;
+      background-color: #2C8748;
+    }
+    .menu img {
+      margin-left: 40px;
+      width: 120px; 
+      height: auto; 
+      transform: scale(2);
+    }
+    .rounded-square {
+      width: 500px; /* Adjust the width of the square */
+      height: 300px; /* Adjust the height of the square */
+      background-color: white; /* Color of the square */
+      border-radius: 20px; /* Adjust the border radius for rounded corners */
+      transform: translate(87%, 80%); /* Adjust the translation */
+    }
+    form {
+      display: flex; /* Display the form as flexbox */
+
+    }
+    input[type="text1"] {
+      position: fixed;
+      top: 50%;
+      left: 12%;
+      width: 380px;
+      flex-grow: 1; /* Allow the input to grow to fill available space */
+      border: none; /* Remove border */
+      border-bottom: 2px solid black; /* Add a bottom border */
+      background-color: transparent; /* Make background transparent */
+      outline: none; /* Remove outline */
+      font-size: 16px; /* Set font size */
+      color: black; /* Set text color to white */
+      font-size: 30px; /* Enlarge font size on focus */
+    }
+    .num {
+      position: absolute;
+      top: 10%;
+      left: 8%;
+      color: black;
+      font-family: Arial, sans-serif;
+      font-size: 25px;
+    }
+    .cahs {
+      width: 500px; /* Adjust the width to your preference */
+      height: auto;
+      position: absolute; /* Set position to absolute to position it relative to its parent */
+      top: 16%; /* Move the top of the image to the vertical center of the parent */
+      left: 36%; /* Move the left of the image to the horizontal center of the parent */
+      transform: translate(-10%, -10%); /* Move the image back by half of its own width and height */
+  }
+  .next {
+    position: fixed;
+    top: 70%; 
+    left: 50%;
+    transform: translateX(-50%) scale(1.2);
+    background-color: black;
+    color: white;
+    padding: 12px 110px;
+    font-size: 30px;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .next:hover {
+    background-color: #2C8748;
+    color: black;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <img src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Assets\heading.png" alt="Logo">
+  </div>
+  <img class ="cahs"src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Assets\MY.png" alt="Logo">
+  <div class="rounded-square">
+    <p class="num">Ilagay ang iyong numero ng mobile:</p>
+    <form action="/action_page.php">
+      <input type="text1" id="num" class="num-input" pattern="\d*" maxlength="11" oninput="validity.valid||(value='');">
+    </form>
+    <button  class="next" onclick="redirectToPage('filmayasum.html')">Next</button>
+  </div>
+  
+  
+
+<script>
+  function redirectToPage(url) {
+    window.location.href = url;
+  }
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+        .menu {
+            top: 0;
+            left: 0;
+            width: 100%;
+            position: fixed;
+            font-family: Arial, sans-serif;
+            background-color: #2C8748;
+        }
+        
+        .menu img {
+            margin-left: 40px;
+            width: 120px; 
+            height: auto; 
+            transform: scale(2);
+        }
+        
+        .txt {
+            position: fixed;
+            top: 10%;
+            left: 15%;
+            font-size: 45px;
+            color:#2C8748;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .rounded-square1 {
+            width: 400px; /* Adjust the width of the square */
+            height: 460px; /* Adjust the height of the square */
+            background-color: #2C8748; /* Color of the square */
+            border-radius: 20px; /* Adjust the border radius for rounded corners */
+            transform: translate(-20%, 32%); /* Adjust the translation */
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+        
+        .cahh {
+            position: absolute; /* Set position to absolute to position it relative to its parent */
+            top: 35%; /* Move the top of the image to the vertical center of the parent */
+            left: 51%; /* Move the left of the image to the horizontal center of the parent */
+            transform: translate(-50%, -50%); /* Move the image back by half of its own width and height */
+        }
+        
+        .cash {
+            position: absolute;
+            left: 30%;
+            bottom: 6%;
+            color: white;
+            font-size: 60px;
+        }
+        
+        .rounded-square2 {
+            width: 400px; /* Adjust the width of the square */
+            height: 460px; /* Adjust the height of the square */
+            background-color: #2C8748; /* Color of the square */
+            border-radius: 20px; /* Adjust the border radius for rounded corners */
+            transform: translate(13%, 32%); /* Adjust the translation */
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+        
+        .wall {
+            position: absolute; /* Set position to absolute to position it relative to its parent */
+            top: 35%; /* Move the top of the image to the vertical center of the parent */
+            left: 50%; /* Move the left of the image to the horizontal center of the parent */
+            transform: translate(-50%, -50%); /* Move the image back by half of its own width and height */
+        }
+        
+        .wallet {
+            position: absolute;
+            left: 22%;
+            bottom: 6%;
+            color: white;
+            font-size: 60px;
+        }
+        
+        .circle-container {
+            display: flex;
+            justify-content: center; /* Align circles horizontally */
+        }
+        
+        .button-link {
+            display: inline-block;
+            text-decoration: none; /* Remove default underline */
+            outline: none; /* Remove default focus outline */
+        }
+        .rounded-square1:hover {
+            background-color: #1F5D32; /* Darker shade on hover */
+          }
+        .rounded-square2:hover {
+            background-color: #1F5D32; /* Darker shade on hover */
+          }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <img src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Assets\heading.png" alt="Logo">
+    </div>
+    
+    <h1 class="txt">How would you like to receive your reward?</h1>
+    
+    <div class="circle-container">
+        <a href="engcashsum.html">
+            <div class="rounded-square1">
+                <img class="cahh" src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Assets\cah.png" alt="cash">
+                <h1 class="cash"><b>Cash</b></h1>
+            </div>
+        </a>
+        
+        <a href="engprefwal.html">
+            <div class="rounded-square2">
+                <img class="wall" src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Assets\wal.png" alt="e-wallet">
+                <h1 class="wallet"><b>E-Wallet</b></h1>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

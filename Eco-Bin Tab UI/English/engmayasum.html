@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+      .logo {
+        width: 650px; /* Adjust the width to your preference */
+        height: auto; 
+        position: fixed; /* Set position to absolute to position it relative to its parent */
+        bottom: 55%;
+        left: 25%; /* Move the left of the image to the horizontal center of the parent */
+    }
+    .trans{
+      color: #2C8748;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 250%;
+      position: fixed;
+      top: 28%;
+      left: 10%;
+    }
+    .rounded-square {
+      position: fixed;
+      top: 30%;
+      left: 4.5%;
+      width: 1150px; /* Adjust the width of the square */
+      height: 350px; /* Adjust the height of the square */
+      background-color: #2C8748; /* Color of the square */
+      border-radius: 20px; /* Adjust the border radius for rounded corners */
+      transform: translate(4.2%, 20%); /* Adjust the translation */
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      animation: panDown 2s ease-in-out forwards;
+      text-align: center;
+      line-height: 0.3;
+    }
+    .ptot {
+      font-size: 35px;
+    }
+    .total {
+      font-size: 35px;
+      font-weight: bold;
+    }
+    .pam {
+      font-size: 35px;
+    }
+    .amount {
+      font-size: 35px;
+      font-weight: bold;  
+    }
+    .pgat {
+      font-size: 35px;
+    }
+    .maya {
+      position: fixed; /* Set position to absolute to position it relative to its parent */
+      top: 72%; /* Move the top of the image to the vertical center of the parent */
+      left: 40%; /* Move the left of the image to the horizontal center of the parent */
+      width: 250px; /* Adjust width as needed */
+      height: auto;
+    }
+    .done {
+      position: fixed;
+      top: 65%; 
+      left: 85%;
+      transform: translateX(-50%) scale(0.9);
+      background-color: black;
+      color: white;
+      padding: 30px 110px;
+      font-size: 35px;
+      border: none;
+      border-radius: 45px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .done:hover {
+      background-color: white;
+      color: black; /* Darker shade on hover */
+    }
+    </style>
+</head>
+<body>
+    <img class="logo" src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Assets\hlogo.png" alt="Logo">
+    <h1 class="trans">Transaction Summary</h1>
+    <div class="rounded-square">
+      <p class="ptot">Total number of bottles inserted:</p>
+      <p class="total">9</p>
+      <p class="pam">Total Amount:</p>
+      <p class="amount">₱3</p>
+      <p class="pgat">Preferred payment gateway:</p>
+      <img class="maya" src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Assets\MYA.png" alt="Logo">
+      <button  class="done" onclick="redirectToPage('engsanitizer.html')"><b>Done</b></button>
+    </div>
+    <script>
+      function redirectToPage(url) {
+        window.location.href = url;
+      }
+      </script>
+</body>
+</html>
