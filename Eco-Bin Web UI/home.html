@@ -4,20 +4,50 @@
     <meta charset="UTF-8" />
     <title></title>
     <style>
-        .menu {
-            top: 0;
-            left: 0;
-            width: 100%;
-            position: fixed;
-            font-family: Arial, sans-serif;
-            background-color: #2C8748;
-          }
-          .menu img {
-            margin-left: 40px;
-            width: 120px; 
-            height: auto; 
-            transform: scale(2);
-          }
+      .menu {
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: fixed;
+        font-family: Arial, sans-serif;
+        background-color: #2C8748;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 9999;
+      }
+      
+      .menu img {
+        margin-left: 40px;
+        width: 120px;
+        height: auto;
+        transform: scale(2);
+      }
+      
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+        padding: 10px; /* Add padding to increase the hover area */
+        transition: background-color 0.3s; /* Add transition for smooth color change */
+      }
+      
+      nav ul li:hover {
+        background-color: #205b35; /* Change background color on hover */
+        font-weight: bold;
+      }
+      
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      
+      
           @property --rotate {
             syntax: "<angle>";
             initial-value: 132deg;
@@ -102,144 +132,70 @@
           }
           .hd {
             position: fixed;
-            top: 38%; /* Adjust the vertical position */
-            left: 70%; /* Adjust the horizontal position */
+            top: 37%; /* Adjust the vertical position */
+            left: 72%; /* Adjust the horizontal position */
             transform: translate(-50%, -50%); /* Center the paragraph */
             font-size: 40px; /* Adjust the font size as needed */
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
-        }
-        .onel {
-            position: fixed;
-            top: 48%; /* Adjust the vertical position */
-            left: 74.5%; /* Adjust the horizontal position */
-            transform: translate(-50%, -50%); /* Center the paragraph */
-            font-size: 22px; /* Adjust the font size as needed */
-            font-family: Arial, Helvetica, sans-serif;
             display: inline;
             min-width: 200px;
             white-space: nowrap;
         }
-        .twol {
-            position: fixed;
-            top: 53%; /* Adjust the vertical position */
-            left: 73%; /* Adjust the horizontal position */
-            transform: translate(-50%, -50%); /* Center the paragraph */
-            font-size: 22px; /* Adjust the font size as needed */
-            font-family: Arial, Helvetica, sans-serif;
-            display: inline;
-            min-width: 200px;
-            white-space: nowrap;
-        }    
-        .thrl {
-            position: fixed;
-            top: 58%; /* Adjust the vertical position */
-            left: 73.5%; /* Adjust the horizontal position */
-            transform: translate(-50%, -50%); /* Center the paragraph */
-            font-size: 22px; /* Adjust the font size as needed */
-            font-family: Arial, Helvetica, sans-serif;
-            display: inline;
-            min-width: 200px;
-            white-space: nowrap;
-        } 
-        .foul {
-            position: fixed;
-            top: 63%; /* Adjust the vertical position */
-            left: 71%; /* Adjust the horizontal position */
-            transform: translate(-50%, -50%); /* Center the paragraph */
-            font-size: 22px; /* Adjust the font size as needed */
-            font-family: Arial, Helvetica, sans-serif;
-            display: inline;
-            min-width: 200px;
-            white-space: nowrap;
-        }
-        .fivl {
+        .container {
             position: fixed;
             top: 68%; /* Adjust the vertical position */
             left: 74%; /* Adjust the horizontal position */
             transform: translate(-50%, -50%); /* Center the paragraph */
-            font-size: 22px; /* Adjust the font size as needed */
+            font-size: 19px; /* Adjust the font size as needed */
             font-family: Arial, Helvetica, sans-serif;
             display: inline;
             min-width: 200px;
             white-space: nowrap;
-        } 
-        .sixl {
-            position: fixed;
-            top: 73%; /* Adjust the vertical position */
-            left: 72%; /* Adjust the horizontal position */
-            transform: translate(-50%, -50%); /* Center the paragraph */
-            font-size: 22px; /* Adjust the font size as needed */
-            font-family: Arial, Helvetica, sans-serif;
-            display: inline;
-            min-width: 200px;
-            white-space: nowrap;
-        } 
-        .sevl {
-            position: fixed;
-            top: 78%; /* Adjust the vertical position */
-            left: 72.5%; /* Adjust the horizontal position */
-            transform: translate(-50%, -50%); /* Center the paragraph */
-            font-size: 22px; /* Adjust the font size as needed */
-            font-family: Arial, Helvetica, sans-serif;
-            display: inline;
-            min-width: 200px;
-            white-space: nowrap;
+            line-height: 0.4;
         }
-        .eigl {
-            position: fixed;
-            top: 83%; /* Adjust the vertical position */
-            left: 72.5%; /* Adjust the horizontal position */
-            transform: translate(-50%, -50%); /* Center the paragraph */
-            font-size: 22px; /* Adjust the font size as needed */
-            font-family: Arial, Helvetica, sans-serif;
-            display: inline;
-            min-width: 200px;
-            white-space: nowrap;
+        .add {
+          position: fixed;
+          top: 93%; /* Adjust the vertical position */
+          left: 73.8%; /* Adjust the horizontal position */
+          transform: translate(-50%, -50%); /* Center the paragraph */
+          font-size: 11px; /* Adjust the font size as needed */
+          font-family: Arial, Helvetica, sans-serif;
+          display: inline;
+          min-width: 200px;
+          white-space: nowrap;
         }
-        .ninl {
-            position: fixed;
-            top: 88%; /* Adjust the vertical position */
-            left: 74%; /* Adjust the horizontal position */
-            transform: translate(-50%, -50%); /* Center the paragraph */
-            font-size: 22px; /* Adjust the font size as needed */
-            font-family: Arial, Helvetica, sans-serif;
-            display: inline;
-            min-width: 200px;
-            white-space: nowrap;
-        }
-        .tenl {
-            position: fixed;
-            top: 93%; /* Adjust the vertical position */
-            left: 66%; /* Adjust the horizontal position */
-            transform: translate(-50%, -50%); /* Center the paragraph */
-            font-size: 22px; /* Adjust the font size as needed */
-            font-family: Arial, Helvetica, sans-serif;
-            display: inline;
-            min-width: 200px;
-            white-space: nowrap;
-        }
-        
     </style>
 </head>
 <body>
-    <div class="menu">
-        <img src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Assets\heading.png" alt="Logo">
-      </div>
+  <div class="menu">
+    <img src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Assets\heading.png" alt="Logo">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Leaderboard</a></li>
+        <li><a href="#">Account</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </div>  
       <div class="card">
         <img src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Assets\logo.png" alt="Logo">
         </div>
         <img class="tlogo" src="C:\Users\Xander Kirstian\Downloads\Eco-Bin UI\Assets\hlogo.png" alt="Logo">
         <p class="hd">Welcome to Eco-Bin!</p>
-        <p class="onel">Introducing the "Eco-Bin," a reverse vending machine</p>
-        <p class="twol">(RVM) revolutionizing plastic bottle recycling. The </p>
-        <p class="thrl">Eco-Bin incentivizes effortless PET bottle recycling</p>
-        <p class="foul">by providing monetary rewards, encourage</p>
-        <p class="fivl">engagement through a leaderboard. Integrated into</p>
-        <p class="sixl">established waste management systems, this</p>
-        <p class="sevl">innovative system not only enhances recycling</p>
-        <p class="eigl">efficiency but also contributes to a sustainable</p>
-        <p class="ninl">future by rewarding eco-friendly actions through E-</p>
-        <p class="tenl">Wallets like GCash or Maya.</p>
+        <div class="container">
+        <p>Introducing the "Eco-Bin," a reverse vending machine</p>
+        <p>(RVM) revolutionizing plastic bottle recycling. The </p>
+        <p>Eco-Bin incentivizes effortless PET bottle recycling</p>
+        <p>by providing monetary rewards, encourage</p>
+        <p>engagement through a leaderboard. Integrated into</p>
+        <p>established waste management systems, this</p>
+        <p>innovative system not only enhances recycling</p>
+        <p>efficiency but also contributes to a sustainable</p>
+        <p>future by rewarding eco-friendly actions through E-</p>
+        <p>Wallets like GCash or Maya.</p>
+        </div>
+        <p class="add">Visit Eco-bin on Dampalit Barangay Hall in M. Sioson St, Malabon City, 1470 Metro Manila </p>
 </body>
 </html>
