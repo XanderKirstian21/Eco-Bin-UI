@@ -130,65 +130,55 @@
   <div class="rounded-square">
     <h1><b>Sign up</b></h1>
     <p class="Uname">Username:</p>
-    <input type="text1" name="Username" value={user.Name}>
+    <input type="text1" id="username" name="Username">
     <p class="Pass">Password:</p>
-    <input type="password" name="Password" value={user.Password}>
+    <input type="password" id="password" name="Password">
     <i class="bi bi-eye-slash" id="togglePassword"></i>
-    <button class="sign" onclick="sign()">Sign In</button>
+    <button class="sign" id="Signin">Sign In</button>
 </div>
-  <!-- Firebase scripts -->
-  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
 
-  <script>
-      // Initialize Firebase
-      const firebaseConfig = {
-        apiKey: "AIzaSyBnkG1oBhJ1_4buozdmyMHzSxcdz_2m5fs",
-        authDomain: "eco-bin-f4457.firebaseapp.com",
-        databaseURL: "https://eco-bin-f4457-default-rtdb.firebaseio.com",
-        projectId: "eco-bin-f4457",
-        storageBucket: "eco-bin-f4457.appspot.com",
-        messagingSenderId: "417063053061",
-        appId: "1:417063053061:web:9dc9283e865bd6468eb96c",
-        measurementId: "G-5K61KB09QG"
-      };
-      firebase.initializeApp(firebaseConfig);
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBaMnJ62PmvFfwlaPqlV5wayJRPL8kYHy8",
+  authDomain: "eco-bin-aa4a0.firebaseapp.com",
+  projectId: "eco-bin-aa4a0",
+  databaseURL: "https://eco-bin-aa4a0-default-rtdb.firebaseio.com",
+  storageBucket: "eco-bin-aa4a0.appspot.com",
+  messagingSenderId: "305228890863",
+  appId: "1:305228890863:web:56537bb06cf4fb9dcd511a",
+  measurementId: "G-FTKGX9G2EN"
+};
 
-      // Get a reference to the database service
-      const database = firebase.database();
-      const auth = firebase.auth();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
-      function sign() {
-          const username = document.getElementById("usname").value;
-          const password = document.getElementById("pass").value;
+//get ref to database services
+const db = getDatabase(app);
 
-          // Validate input fields
-          if (!validateField(username) || !validateField(password)) {
-              alert('One or more fields are empty!');
-              return;
-          }
+document.getElementById("Signin").addEventListener('click', function(e){
+ e.preventDefault();
+ set(ref(db, 'Users/' + document.getElementById("username").value),
+ {
 
-          // Move on with Auth
-          auth.createUserWithEmailAndPassword(username, password)
-              .then(function (userCredential) {
-                  // DOne
-                  alert('User Created!!');
-                  // You can add more logic here if needed
-              })
-              .catch(function (error) {
-                  // Firebase will use this to alert of its errors
-                  var errorCode = error.code;
-                  var errorMessage = error.message;
-                  alert(errorMessage);
-              });
-      }
-
-      // Validation Functions
-      function validateField(field) {
-          return field.trim() !== ''; // Check if the field is not empty
-      }
-      
+   username: document.getElementById("username").value,
+   password: document.getElementById("password").value,
+  }, function(error) {
+    if (error) {
+        alert("Failed to save data! Please contact the admins");
+    } else {
+        alert("Login Successful!");
+        window.location.href = "englogin.html"; // Redirect to englogin.html after successful data submission
+    }
+});
+        alert("Login Successfull!");
+        setTimeout(function() {
+          window.location.href = "englogin.html"; // Redirect to englogin.html after 1 second
+      }, 1000); // 1000 milliseconds = 1 second
+})
   </script>
 </body>
 </html>
